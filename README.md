@@ -9,7 +9,8 @@
 </div>
 </br>
   <div align="start">
-    In this repository I'm sharing some of what I've been learning about Spring Boot with Liquibase. By following the instructions and reading the code I hope I can contribute to your development. Good studies. :coffee: 
+    In this repository I'm sharing some of what I've been learning about Spring Boot with 
+   <a href="https://docs.liquibase.com/tools-integrations/springboot/springboot.html">Liquibase.</a> By following the instructions and reading the code I hope I can contribute to your development. Good studies. :coffee: 
   </div>
   <h3 align="start">
     Go to <a href="https://start.spring.io/">Spring Initializr</a>, configure and add the dependencies.
@@ -37,7 +38,7 @@ spring:
     change-log: classpath:db/changelog/changelog-master.xml
 ```
 
-We can use one or more migration files as long as the other files are configured in the main file. In the example done, I tried to organize in different directories and using different format files. That way we can make the project more organized confirm example below.
+We may use one or more migration files as long as the other files are configured in the main file. In the example done, I tried to organize in different directories and using different format files. That way we can make the project more organized confirm example below.
 
 ```
  <!--    changelog-master.xml -->
@@ -60,6 +61,37 @@ We can use one or more migration files as long as the other files are configured
     <include file="db/changelog/user/insert.yaml" />
 
 </databaseChangeLog>
+```
+The file *changelog-master.xml* includes new files where our migration instructions are.
+
+![a](https://user-images.githubusercontent.com/23198970/179365703-d6b2e4a9-ed63-4c8a-afec-2b8ae22c2daf.png)
+
+```yaml
+#create.yaml
+databaseChangeLog:
+  - changeSet:
+      id: 2
+      author: Kalistonss
+      changes:
+        - createTable:
+            tableName: tb_users
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(100)
+              - column:
+                  name: email
+                  type: varchar(100)
+                  constraints:
+                    nullable: false
+
 ```
 
 ##### Thanks :call_me_hand:
