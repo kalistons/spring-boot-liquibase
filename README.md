@@ -61,3 +61,13 @@ We can use one or more migration files as long as the other files are configured
 
 </databaseChangeLog>
 ```
+
+##### Thanks :call_me_hand:
+ [![LinkedIn][linkedin-shield]][linkedin-url]
+ 
+ 
+ 
+ [instagram-shield]: https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white
+[instagram-url]: https://www.instagram.com/kaliston_s/
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://www.linkedin.com/in/kalistonss/
