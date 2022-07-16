@@ -36,3 +36,28 @@ spring:
   liquibase:
     change-log: classpath:db/changelog/changelog-master.xml
 ```
+
+We can use one or more migration files as long as the other files are configured in the main file. In the example done, I tried to organize in different directories and using different format files. That way we can make the project more organized confirm example below.
+
+```
+ <!--    changelog-master.xml -->
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+   
+    <changeSet id="1" author="kalistonss">
+        <validCheckSum></validCheckSum>
+        <sqlFile path="db/changelog/book/create.sql"/>
+    </changeSet>
+    <changeSet id="3" author="kalistonss">
+        <validCheckSum></validCheckSum>
+        <sqlFile path="db/changelog/book/insert.sql"/>
+    </changeSet>
+    <include file="db/changelog/user/create.yaml" />
+    <include file="db/changelog/user/insert.yaml" />
+
+</databaseChangeLog>
+```
