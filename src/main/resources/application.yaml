@@ -2,6 +2,11 @@ server:
   servlet:
     context-path: /api
 spring:
+  liquibase:
+    change-log: classpath:db/changelog-master.xml
+    default-schema:
+    drop-first: false
+    enabled: true
   h2:
     console:
       enabled: true
