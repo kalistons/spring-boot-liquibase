@@ -1,0 +1,2 @@
+INSERT INTO tb_books(name, description) VALUES ('Patterns of Enterprise Application Architecture', 'The practice of enterprise application development has benefited from the emergence of many new enabling technologies. ');
+INSERT INTO tb_books(name, description) VALUES ('Design Patterns: Elements of Reusable Object-Oriented Software', 'Design Patterns: Elements of Reusable Object-Oriented Software is a software engineering book describing software design patterns.');

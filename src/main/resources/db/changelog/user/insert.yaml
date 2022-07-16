@@ -1,0 +1,14 @@
+databaseChangeLog:
+- changeSet:
+    id: 4
+    author: kalistonss
+    changes:
+      - insert:
+          tableName: tb_users
+          columns:
+            - column:
+                name: name
+                value: Pedro Thiago
+            - column:
+                name: email
+                value: pedro.thi@gmail.com

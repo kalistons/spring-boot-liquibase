@@ -9,6 +9,11 @@
         <validCheckSum></validCheckSum>
         <sqlFile path="db/changelog/book/create.sql"/>
     </changeSet>
+    <changeSet id="3" author="kalistonss">
+        <validCheckSum></validCheckSum>
+        <sqlFile path="db/changelog/book/insert.sql"/>
+    </changeSet>
     <include file="db/changelog/user/create.yaml" />
+    <include file="db/changelog/user/insert.yaml" />
 
 </databaseChangeLog>
