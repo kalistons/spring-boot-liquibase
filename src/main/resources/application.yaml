@@ -3,7 +3,7 @@ server:
     context-path: /api
 spring:
   liquibase:
-    change-log: classpath:db/changelog-master.xml
+    change-log: classpath:db/changelog/changelog-master.xml
     default-schema:
     drop-first: false
     enabled: true
