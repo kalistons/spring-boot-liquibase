@@ -93,6 +93,8 @@ databaseChangeLog:
                     nullable: false
 
 ```
+This sample also enables the H2 console (at `http://localhost:8080/api/h2-console`) so that you can review the state of the database (the default jdbc url is jdbc:h2:mem:hbasedb).
+
 
 ##### Thanks :call_me_hand:
  [![LinkedIn][linkedin-shield]][linkedin-url]
